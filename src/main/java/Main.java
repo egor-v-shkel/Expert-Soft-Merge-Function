@@ -30,14 +30,12 @@ public class Main {
                 if (IndexB >= SizeB) break;
             }
             mergedList.add(a.get(IndexA));
-            if (IndexB >= b.size()) {
-                break;
-            }
+            if (IndexB >= SizeB) break;
             IndexA++;
         }
-        if (IndexB < b.size()) {  // add remaining
+        if (IndexB < SizeB) {  // add remaining
             mergedList.addAll(b.subList(IndexB, SizeB));
-        } else if (IndexA < a.size()) {
+        } else if (IndexA < SizeA) {
             mergedList.addAll(a.subList(++IndexA, SizeA));
         }
 
